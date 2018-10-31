@@ -12,6 +12,8 @@
 		9472F6312189AE840007F00C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9472F62F2189AE840007F00C /* Main.storyboard */; };
 		9472F6332189AE860007F00C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9472F6322189AE860007F00C /* Assets.xcassets */; };
 		9472F6362189AE860007F00C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9472F6342189AE860007F00C /* LaunchScreen.storyboard */; };
+		9472F63E2189AFE20007F00C /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472F63D2189AFE20007F00C /* CardViewController.xib */; };
+		9472F6402189B0D70007F00C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472F63F2189B0D70007F00C /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9472F6322189AE860007F00C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9472F6352189AE860007F00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9472F6372189AE860007F00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9472F63D2189AFE20007F00C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		9472F63F2189B0D70007F00C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				9472F62B2189AE840007F00C /* AppDelegate.swift */,
 				9472F62D2189AE840007F00C /* ViewController.swift */,
+				9472F63F2189B0D70007F00C /* CardViewController.swift */,
 				9472F62F2189AE840007F00C /* Main.storyboard */,
+				9472F63D2189AFE20007F00C /* CardViewController.xib */,
 				9472F6322189AE860007F00C /* Assets.xcassets */,
 				9472F6342189AE860007F00C /* LaunchScreen.storyboard */,
 				9472F6372189AE860007F00C /* Info.plist */,
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9472F63E2189AFE20007F00C /* CardViewController.xib in Resources */,
 				9472F6362189AE860007F00C /* LaunchScreen.storyboard in Resources */,
 				9472F6332189AE860007F00C /* Assets.xcassets in Resources */,
 				9472F6312189AE840007F00C /* Main.storyboard in Resources */,
@@ -137,6 +144,7 @@
 			files = (
 				9472F62E2189AE840007F00C /* ViewController.swift in Sources */,
 				9472F62C2189AE840007F00C /* AppDelegate.swift in Sources */,
+				9472F6402189B0D70007F00C /* CardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
