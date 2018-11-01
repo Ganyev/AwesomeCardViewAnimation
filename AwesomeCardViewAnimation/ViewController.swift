@@ -47,7 +47,7 @@ class ViewController: UIViewController {
       
       cardViewController.view.clipsToBounds = true
       
-      let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
+      let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
       let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
       
       cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
