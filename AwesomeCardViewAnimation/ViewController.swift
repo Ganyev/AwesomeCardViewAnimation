@@ -18,7 +18,7 @@ class ViewController: UIViewController {
    var visualEffectView: UIVisualEffectView!
    
    let cardHeight: CGFloat = 600
-   let cardHandleAreaHeight: CGFloat = 40
+   let cardHandleAreaHeight: CGFloat = 50
    
    var cardVisible = false
    var nextState: CardState {
@@ -56,7 +56,12 @@ class ViewController: UIViewController {
    
    @objc
    func handleCardTap(recognizer: UITapGestureRecognizer) {
-      
+      switch recognizer.state {
+      case .ended:
+         animateTransitionIfNeeded(state: nextState, duration: 0.9)
+      default:
+         break
+      }
    }
    
    @objc
@@ -95,7 +100,29 @@ class ViewController: UIViewController {
          frameAnimator.startAnimation()
          runningAnimations.append(frameAnimator)
          
+         let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+            switch state {
+            case .expanded:
+               self.cardViewController.view.layer.cornerRadius = 12
+            case .collapsed:
+               self.cardViewController.view.layer.cornerRadius  = 12
+            }
+         }
          
+         cornerRadiusAnimator.startAnimation()
+         runningAnimations.append(cornerRadiusAnimator)
+         
+         let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+            switch state {
+            case .expanded:
+               self.visualEffectView.effect = UIBlurEffect(style: .light)
+            case .collapsed:
+               self.visualEffectView.effect = nil
+            }
+         }
+         
+         blurAnimator.startAnimation()
+         runningAnimations.append(blurAnimator)
       }
    }
    
